@@ -42,7 +42,6 @@ export const RegisterPage = () => {
 
    const onSubmit = ( event ) => {
     event.preventDefault();
-    console.log('pasa por aqui')
     setSubmitted(true);
     if ( !isFormValid ) return;
     dispatch( startCreatingUserWithEmailPassword(formState));

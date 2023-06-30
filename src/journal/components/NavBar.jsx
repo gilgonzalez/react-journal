@@ -41,8 +41,8 @@ export const NavBar = ({ drawerWidth = 240 }) => {
             JournalApp{" "}
           </Typography>
 
-          <IconButton color="error">
-            <LogoutOutlined onClick={ onLogout} />
+          <IconButton onClick={ onLogout} color="error">
+            <LogoutOutlined  />
           </IconButton>
         </Grid>
       </Toolbar>

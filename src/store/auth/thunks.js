@@ -10,7 +10,6 @@ export const startGoogleSignIn = () => async(dispatch) => {
     const result = await signInWithGoogle()
     if(!result.ok) return dispatch(logout(result.errorMessage))
     delete result.ok
-    console.log(result)
     dispatch(login(result))
 }
 
@@ -29,7 +28,6 @@ export const startLoginWithEmailPassword = ({email, password}) => async(dispatch
     dispatch(checkingCredentials())
 
     const {ok, uid, photoURL, errorMessage, displayName} = await loginWithEmailPassword({email, password})
-    console.log({errorMessage})
     if(!ok) return dispatch(logout({errorMessage}))
     dispatch(login({uid, photoURL, email, displayName}))
 }
